@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import LoginForm from "./LoginForm";
+import LoginForm from "./pages/auth/login";
 import { AuthProvider } from "./common/contexts";
 function App() {
   return (

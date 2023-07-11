@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./LoginForm.css";
+import "../../LoginForm.css";
 
-import { useAuth } from "./common/hooks";
+import { useAuth } from "../../common/hooks";
 
 const LoginForm = () => {
   const { register, handleSubmit, errors } = useForm();
@@ -34,14 +34,14 @@ const LoginForm = () => {
         />
         {errors.email && <p className="error">{errors.email.message}</p>}
 
-        <label htmlFor="inputPassword">Password</label>
+        <label htmlFor="inputPassword">Name</label>
         <input
-          type="password"
+          type="text"
           id="inputPassword"
-          name="password"
-          ref={register({ required: "Enter your password" })}
+          name="name"
+          ref={register({ required: "Enter your name" })}
         />
-        {errors.password && <p className="error">{errors.password.message}</p>}
+        {errors.name && <p className="error">{errors.name.message}</p>}
 
         <button type="submit" onClick={handleSubmit(onHandleLogin)}>
           Login
